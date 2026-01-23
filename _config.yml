@@ -1,0 +1,41 @@
+# --- Informasi Dasar Situs ---
+title: My Modern Portfolio
+email: komikers09@gmail.com
+description: >-
+  Portfolio digital profesional dengan desain modern, gradient, 
+  dan integrasi langsung ke WhatsApp.
+baseurl: ""
+url: "https://ishikawauta.github.io"
+
+# --- Data Profil ---
+author:
+  name: Eka saputra
+  role: Fullstack Developer & Devops Engineer
+  whatsapp: "62895701060973"
+
+# --- Pengaturan Build ---
+markdown: kramdown
+highlighter: rouge
+
+# --- File yang Diabaikan ---
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - vendor
+
+# --- Plugins ---
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# --- Pengaturan Khusus (Defaults) ---
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

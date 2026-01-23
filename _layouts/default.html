@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-gradient-modern { background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); }
+        .hover-lift { transition: all 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="bg-[#0f172a] text-slate-200 min-h-screen flex flex-col">
+
+    <nav class="sticky top-0 z-50 glass px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="{{ site.baseurl }}/" class="text-2xl font-extrabold tracking-tighter text-white">
+                MY<span class="text-indigo-500">FOLIO.</span>
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="{{ site.baseurl }}/" class="hover:text-indigo-400 transition">Home</a>
+                <a href="{{ site.baseurl }}/about" class="hover:text-indigo-400 transition">About</a>
+                <a href="{{ site.baseurl }}/contact" class="hover:text-indigo-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        {{ content }}
+    </main>
+
+    <footer class="py-10 text-center text-slate-500 border-t border-slate-800">
+        <p>&copy; 2026 {{ site.author.name }}. Built with Jekyll & Tailwind.</p>
+    </footer>
+
+</body>
+</html>
