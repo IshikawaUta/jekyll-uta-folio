@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<div class="max-w-5xl mx-auto px-6 py-20 animate__animated animate__fadeIn">
+    <a href="{{ '/' | relative_url }}" class="text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition flex items-center mb-8 group">
+        <span class="transform group-hover:-translate-x-2 transition-transform duration-300 mr-2">←</span> Kembali ke Portofolio
+    </a>
+
+    <div class="flex flex-col lg:flex-row gap-12">
+        <div class="lg:w-2/3">
+            <div class="glass rounded-3xl overflow-hidden mb-8 border border-slate-200 dark:border-slate-700/50 shadow-sm">
+                {% if page.thumbnail %}
+                    <img src="{{ page.thumbnail }}" alt="{{ page.title }}" class="w-full h-auto object-cover">
+                {% else %}
+                    <div class="bg-slate-200 dark:bg-slate-800 h-64 flex items-center justify-center text-6xl">📁</div>
+                {% endif %}
+            </div>
+            
+            <div class="prose dark:prose-invert lg:prose-xl text-slate-600 dark:text-slate-400 max-w-none">
+                {{ content }}
+            </div>
+        </div>
+
+        <div class="lg:w-1/3">
+            <div class="sticky top-28 space-y-6">
+                <div class="glass p-8 rounded-3xl border-l-4 border-indigo-500 shadow-md">
+                    <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">{{ page.category }}</span>
+                    <h1 class="text-3xl font-black text-slate-900 dark:text-white mt-2 mb-4 leading-tight">{{ page.title }}</h1>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        {{ page.description }}
+                    </p>
+                    
+                    <div class="space-y-4 border-t border-slate-200 dark:border-slate-800 pt-6">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">Klien</span>
+                            <span class="text-slate-900 dark:text-slate-200 font-medium">Internal Project</span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-slate-500">Peran</span>
+                            <span class="text-slate-900 dark:text-slate-200 font-medium">{{ site.author.role }}</span>
+                        </div>
+                    </div>
+
+                    <a href="{{ '/contact' | relative_url }}" class="mt-8 block w-full bg-gradient-modern text-center py-4 rounded-xl font-bold text-white hover:scale-105 transition duration-300 shadow-lg shadow-indigo-500/25">
+                        Tertarik dengan Proyek Ini?
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
