@@ -7,18 +7,27 @@ title: Contact
     <div class="flex flex-col md:flex-row gap-16 items-start">
         
         <div class="md:w-1/2 animate__animated animate__fadeInLeft">
-            <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">Ayo Berkolaborasi.</h2>
-            <p class="text-slate-600 dark:text-slate-400 text-lg mb-8">Punya ide proyek atau sekadar ingin menyapa? Silakan isi formulir ini, pesan Anda akan langsung masuk ke WhatsApp saya.</p>
+            <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">
+                {{ site.contact_title | default: "Ayo Berkolaborasi." }}
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-lg mb-8">
+                {{ site.contact_description | default: "Punya ide proyek atau sekadar ingin menyapa? Silakan isi formulir ini, pesan Anda akan langsung masuk ke WhatsApp saya." }}
+            </p>
             
             <div class="space-y-4 text-slate-700 dark:text-slate-300">
+                {% if site.email %}
                 <div class="flex items-center space-x-4">
                     <span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-lg">📧</span>
                     <span>{{ site.email }}</span>
                 </div>
+                {% endif %}
+                
+                {% if site.location %}
                 <div class="flex items-center space-x-4">
                     <span class="p-3 bg-slate-200 dark:bg-slate-800 rounded-lg">📍</span>
-                    <span>Indonesia</span>
+                    <span>{{ site.location }}</span>
                 </div>
+                {% endif %}
             </div>
         </div>
 
@@ -53,7 +62,11 @@ function sendToWA() {
         return;
     }
 
-    const text = encodeURIComponent(`Halo, saya *${name}*. Pesan: *${msg}*`);
+    // Format pesan WhatsApp dinamis
+    const intro = "{{ site.whatsapp_intro_text | default: 'Halo, saya [name]. Pesan: [msg]' }}";
+    const formattedMsg = intro.replace("[name]", name).replace("[msg]", msg);
+    
+    const text = encodeURIComponent(formattedMsg);
     const whatsappUrl = `https://wa.me/${phone}?text=${text}`;
     
     window.open(whatsappUrl, '_blank');

@@ -4,14 +4,60 @@ email: komikers09@gmail.com
 description: >-
   Portfolio digital profesional dengan desain modern, gradient, 
   dan integrasi langsung ke WhatsApp.
-baseurl: ""
+baseurl: "" 
 url: "https://ishikawauta.github.io"
 
-# --- Data Profil ---
+# --- Data Profil (Digunakan di seluruh situs) ---
 author:
   name: Eka saputra
   role: Fullstack Developer
   whatsapp: "62895701060973"
+  image: "https://res.cloudinary.com/dzsqaauqn/image/upload/v1751897200/nxdkmqhzszftsvmazjdc.jpg"
+
+# --- Kustomisasi Halaman Utama (Theme Settings) ---
+hero_title: "Membangun <span class='text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400'>Masa Depan</span> Lewat Baris Kode."
+hero_description: "Halo! Saya [name], seorang [role] yang fokus pada estetika dan performa web."
+
+# Bagian Keahlian (Skills)
+skills_title: "Keahlian Utama"
+skills_description: "Teknologi yang saya gunakan untuk mewujudkan ide Anda."
+skills:
+  - name: "Web Development"
+    icon: "💻"
+    description: "HTML5, CSS3, JavaScript, dan framework modern seperti React atau Vue."
+  - name: "Devops Engineer"
+    icon: "👨🏻‍💻"
+    description: "Membangun infrastruktur otomatis serta memastikan efisiensi pengembangan perangkat lunak."
+  - name: "Optimization"
+    icon: "🚀"
+    description: "Memastikan website cepat, SEO friendly, dan responsif di semua perangkat."
+
+# Bagian Proyek
+projects_title: "Proyek Terbaru"
+projects_description: "Karya terpilih yang telah saya selesaikan."
+
+# --- Pengaturan Halaman About ---
+about_title: "Tentang <span class='text-indigo-600 dark:text-indigo-400'>Saya</span>"
+
+# Gunakan >- untuk menulis teks panjang beberapa baris
+about_content: >-
+  Saya adalah seorang kreatif yang bersemangat dalam menggabungkan desain visual dengan teknologi web terbaru. 
+  Dengan pengalaman bertahun-tahun di industri digital, saya telah membantu berbagai klien membangun identitas online mereka.
+
+  Visi saya adalah menciptakan solusi digital yang tidak hanya terlihat bagus, tetapi juga memberikan hasil nyata bagi bisnis. 
+  Saya sangat menyukai tantangan baru dan selalu belajar teknologi terbaru setiap harinya.
+
+about_quote:
+  text: "Desain bukan sekadar apa yang terlihat, tapi bagaimana cara kerjanya."
+  author: "Steve Jobs"
+
+# --- Pengaturan Halaman Kontak ---
+location: "Jakarta, Indonesia"
+contact_title: "Ayo Berkolaborasi."
+contact_description: "Punya ide proyek atau sekadar ingin menyapa? Silakan isi formulir ini, pesan Anda akan langsung masuk ke WhatsApp saya."
+
+# Format pesan yang akan muncul di chat WhatsApp (gunakan [name] dan [msg] sebagai placeholder)
+whatsapp_intro_text: "Halo, saya *[name]*. Saya ingin berdiskusi tentang: [msg]"
 
 # --- Pengaturan Build ---
 markdown: kramdown
@@ -26,6 +72,8 @@ exclude:
   - .jekyll-cache
   - .jekyll-metadata
   - vendor
+  - README.md
+  - SCREENSHOT.png
 
 # --- Plugins ---
 plugins:
@@ -39,6 +87,11 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
 
 collections:
   projects:
