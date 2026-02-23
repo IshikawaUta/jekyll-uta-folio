@@ -33,6 +33,22 @@ Untuk bekerja sebagai tema, pastikan struktur folder Anda mengikuti standar beri
 
 ---
 
+## 🚀 Memulai (Quick Start)
+
+Gunakan metode ini jika Anda ingin membuat portofolio baru dengan cepat tanpa harus melakukan fork manual:
+
+1. [cite_start]**Gunakan Template**: Klik tombol hijau **"Use this template"** di bagian atas halaman repositori ini. [cite: 1]
+2. [cite_start]**Buat Repositori Baru**: Pilih akun pemilik dan beri nama repositori Anda (contoh: `my-portfolio`). [cite: 1]
+3. **Konfigurasi**: Buka file `_config.yml` dan sesuaikan data diri Anda:
+   - Ubah `author.name`, `author.role`, dan `author.whatsapp`.
+   - Sesuaikan `email` dan `url` situs Anda.
+4. **Aktifkan GitHub Pages**:
+   - Masuk ke tab **Settings** > **Pages** di repositori baru Anda.
+   - Pada bagian **Build and deployment**, pilih source "GitHub Actions".
+5. **Selesai**: Tunggu proses build selesai, dan portofolio Anda siap diakses!
+
+---
+
 ## 🚀 Cara Instalasi
 
 ### Sebagai Remote Theme (GitHub Pages)
