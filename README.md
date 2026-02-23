@@ -8,8 +8,7 @@ Tema portofolio Jekyll yang modern, responsif, dan sangat ringan. Dirancang khus
 
 ---
 
-![Theme background white](assets/img/bg-wt.png)
-![Theme background black](assets/img/bg-bl.png)
+![Theme background white](assets/img/bg-wht.png)
 
 ## ✨ Fitur Utama
 * 🎨 **Desain Modern & Glassmorphism**: Estetika premium dengan aksen gradient indigo & purple.
