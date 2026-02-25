@@ -53,34 +53,11 @@ Gunakan metode ini jika Anda ingin membuat portofolio baru dengan cepat tanpa ha
 
 ## 🚀 Cara Instalasi
 
-### Sebagai Remote Theme (GitHub Pages)
-
-Jika Anda menggunakan GitHub Pages, ini adalah cara tercepat:
-
-1. Tambahkan plugin `jekyll-remote-theme` ke `Gemfile` Anda:
-```ruby
-group :jekyll_plugins do
-  gem "jekyll-remote-theme"
-end
-```
-
-
-2. Di file `_config.yml` Anda, tambahkan:
-```yaml
-remote_theme: ishikawauta/jekyll-uta-folio
-plugins:
-  - jekyll-remote-theme
-  - jekyll-seo-tag
-  - jekyll-feed
-```
-
-
-
-### Sebagai Gem-based Theme
+### Gem-based Theme
 
 1. Tambahkan baris berikut ke `Gemfile` proyek Jekyll Anda:
 ```ruby
-gem "jekyll-uta-folio"
+gem 'jekyll-uta-folio', '~> 0.1.0'
 ```
 
 
@@ -89,13 +66,10 @@ gem "jekyll-uta-folio"
 bundle install
 ```
 
-
 3. Tambahkan di `_config.yml`:
 ```yaml
 theme: jekyll-uta-folio
 ```
-
-
 
 ---
 
