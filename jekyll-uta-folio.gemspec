@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-uta-folio"
-  spec.version       = "0.1.0"
+  spec.version       = "1.1.0"
   spec.authors       = ["IshikawaUta"]
   spec.email         = ["komikers09@gmail.com"]
 
@@ -12,9 +12,10 @@ Gem::Specification.new do |spec|
 
   spec.metadata["plugin_type"] = "theme"
 
-  spec.files = Dir["{_layouts,_includes,assets,_projects}/**/*", "LICENSE", "README.md", "_config.yml", "index.md", "about.md", "contact.md"]
+  spec.files = Dir["{_layouts,_includes,assets,_projects}/**/*", "LICENSE", "README.md", "_config.yml", "index.md", "about.md", "contact.md", "robots.txt"]
 
   spec.add_runtime_dependency "jekyll", "~> 4.0"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.12"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
+  spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
 end

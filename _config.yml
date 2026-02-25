@@ -6,6 +6,7 @@ description: >-
   dan integrasi langsung ke WhatsApp.
 baseurl: "" 
 url: "https://ishikawauta.github.io"
+lang: "id-ID"
 
 # --- Data Profil (Digunakan di seluruh situs) ---
 author:
@@ -79,6 +80,7 @@ exclude:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # --- Pengaturan Khusus (Defaults) ---
 defaults:
